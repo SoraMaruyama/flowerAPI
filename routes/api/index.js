@@ -5,7 +5,7 @@ const router = express.Router();
 const flowerRouter = require("./flower");
 
 module.exports = services => {
-  router.use("/flower", flowerRouter(services));
+  router.use("/flowerpower", flowerRouter(services));
 
   return router;
 };

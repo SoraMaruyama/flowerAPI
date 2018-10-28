@@ -112,7 +112,7 @@ app.delete("/flower/api/de", deleteWord);
 
 function deleteWord(req, res) {
   const deleteWord = req.body.name;
-  console.log(body);
+  console.log(req.body);
   flowers[deleteWord] = null;
   res.send(flowers);
 }
