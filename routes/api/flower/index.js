@@ -3,7 +3,7 @@ const express = require("express");
 const router = express.Router();
 
 module.exports = services => {
-  router.post("", (req, res) => {
+  router.post("/", (req, res) => {
     const searchApi = "https://api.giphy.com/";
     const getApi = "v1/gifs/search?";
     const apiKey = "&api_key=dc6zaTOxFJmzC";
@@ -29,7 +29,7 @@ module.exports = services => {
       .catch(err => res.status(400).send(err.message));
   });
 
-  router.get("", (req, res) =>
+  router.get("/", (req, res) =>
     services.db.flower
       .list()
       .then(flowers => flowers.map(flower => flower.serialize()))
@@ -37,7 +37,7 @@ module.exports = services => {
       .catch(err => res.status(400).send(err.message))
   );
 
-  router.put("", (req, res) =>
+  router.put("/", (req, res) =>
     services.db.flower
       .create({
         id: req.params.id,
@@ -48,7 +48,7 @@ module.exports = services => {
       .catch(err => res.status(400).send(err.message))
   );
 
-  router.delete("", (req, res) =>
+  router.delete("/", (req, res) =>
     services.db.flower
       .create({
         id: req.params.id,

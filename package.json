@@ -4,7 +4,7 @@
   "description": "Second day of the Code Chrysalis Databases sprint",
   "main": "index.js",
   "scripts": {
-    "test": "node tests/initialize.js && mocha tests/test2.js && yarn lint",
+    "test": "node tests/initialize.js && mocha tests/test.js && mocha tests/test2.js && yarn lint",
     "lint": "eslint --fix ./**/*.js",
     "start": "node index.js",
     "migrate": "knex migrate:latest --knexfile services/db/knexfile.js",
