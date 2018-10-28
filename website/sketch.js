@@ -1,8 +1,7 @@
 function setup() {
-  createCanvas(640, 480);
-  background(51);
+  // createCanvas(640, 480);
+  // background(51);
   //   loadJSON("/all", gotData);
-
   //   function gotData(data) {
   //     console.log(data);
   //   }
