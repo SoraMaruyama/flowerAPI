@@ -1,0 +1,11 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "initTest",
+      "command": "node",
+      "args": ["./tests/initialize.js"],
+      "type": "shell"
+    }
+  ]
+}

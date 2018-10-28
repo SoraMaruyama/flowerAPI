@@ -1,8 +1,8 @@
 const express = require("express");
 const app = express();
 const router = express.Router();
-const flowerpowerserver = app.listen(4000, listening);
-app.use(express.static("public"));
+const flowerpowerserver = app.listen(3000, listening);
+router.use(express.static("public"));
 function listening() {
   console.log("flower power web server...");
 }
