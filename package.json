@@ -1,0 +1,41 @@
+{
+  "name": "databases-2",
+  "version": "1.0.0",
+  "description": "Second day of the Code Chrysalis Databases sprint",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests/initialize.js && mocha tests/test2.js && yarn lint",
+    "lint": "eslint --fix ./**/*.js",
+    "start": "node index.js",
+    "migrate": "knex migrate:latest --knexfile services/db/knexfile.js",
+    "rollback": "knex migrate:rollback --knexfile services/db/knexfile.js ",
+    "precommit": "pretty-quick --staged"
+  },
+  "author": "RP-3 <sarith21@gmail.com> (http://suchisthepowerofjs.com/)",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "bcrypt": "^3.0.2",
+    "bluebird": "^3.5.2",
+    "body-parser": "^1.18.3",
+    "chai-http": "^4.2.0",
+    "express": "^4.16.4",
+    "knex": "^0.15.2",
+    "load-json-file": "^5.1.0",
+    "moment": "^2.22.2",
+    "morgan": "^1.9.1",
+    "node-fetch": "^2.2.0",
+    "pg": "^7.6.0"
+  },
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "eslint": "^5.7.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-config-problems": "^1.1.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "husky": "^1.1.2",
+    "mocha": "^5.2.0",
+    "prettier": "^1.12.1",
+    "pretty-quick": "^1.4.1"
+  }
+}
