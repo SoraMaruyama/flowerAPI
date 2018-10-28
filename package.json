@@ -9,7 +9,8 @@
     "start": "node index.js",
     "migrate": "knex migrate:latest --knexfile services/db/knexfile.js",
     "rollback": "knex migrate:rollback --knexfile services/db/knexfile.js ",
-    "precommit": "pretty-quick --staged"
+    "precommit": "pretty-quick --staged",
+    "seed": "knex seed:run --knexFile services/db/knexfile.js"
   },
   "author": "RP-3 <sarith21@gmail.com> (http://suchisthepowerofjs.com/)",
   "license": "UNLICENSED",
